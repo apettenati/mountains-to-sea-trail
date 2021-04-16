@@ -1,0 +1,32 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <header>
+      <h1> The Mountains-to-Sea Trail </h1>
+    </header>
+    <main>
+      <div class="waypoint-converter">
+        <h2> Waypoint to Trackpoint Converter </h2>
+        <div class="instructions">
+          <h3>Instructions</h3>
+          <p> Upload a file containing the trackpoint data and a file containing the waypoint data. </p>
+          <p> Files should contain columns named:
+          <li>id</li>
+          <li>lat</li>
+          <li>lon</li>
+          </p>
+          <p> File output will include the original waypoint data and associated trackpoint data. </p>
+        </div>
+        <div class="file-upload">
+          <label for="trackpoint-data">Trackpoint Data: </label>
+          <input type="file" class="trackpoint-data" name="trackpoint">
+          <label for="waypoint-data">Waypoint Data: </label>
+          <input type="file" class="waypoint-data" name="waypoint">
+          <input type="submit" value="Convert">
+        </div>
+      </div>
+    </main>
+    <script defer src="./dist/bundle.js"></script>
+  </body>
+</html>
