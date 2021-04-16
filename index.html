@@ -36,31 +36,9 @@
     </div>
   </main>
   <script>
-    const trackpointFile = document.querySelector('.trackpoint-data')
-    const waypointFile = document.querySelector('.waypoint-data')
-    const convertSubmit = document.querySelector('[type="submit"]')
-    convertSubmit.addEventListener('click', (event) => {
-      console.log(event)
-      const trackpointData = trackpointFile.files[0]
-      const waypointData = waypointFile.files[0]
-      // console.log(trackpointFile.files[0])
-      const trackpointParser = Papa.parse(trackpointData, {
-        header: true,
-        complete: function(results, file) {
-          console.log("Parsing complete:", results, file);
-        },
-        })
-
-      const waypointParser = Papa.parse(waypointData, {
-        header: true,
-        complete: function(results, file) {
-          console.log("Parsing complete:", results, file);
-        }
-      })
-    })
   </script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.2.0/papaparse.min.js"></script>
-  <!-- <script src="./index.js"></script> -->
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.2.0/papaparse.min.js"></script> -->
+  <script src="./dist/bundle.js"></script>
 </body>
 
 </html>
