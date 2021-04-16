@@ -1,4 +1,4 @@
-Trackpoint ID,trksegID,lat,lon,ele,time,magvar,geoidheight,name,cmt,desc,src,sym,type,fix,sat,hdop,vdop,pdop,ageofdgpsdata,dgpsid,Temperature,Depth,wtemp,hr,cad
+id,trksegID,lat,lon,ele,time,magvar,geoidheight,name,cmt,desc,src,sym,type,fix,sat,hdop,vdop,pdop,ageofdgpsdata,dgpsid,Temperature,Depth,wtemp,hr,cad
 1,1,36.3945638760924,-80.2658248599619,518,,,,,,,,,,,,,,,,,,,,,
 2,1,36.3945701625198,-80.265817316249,518,,,,,,,,,,,,,,,,,,,,,
 3,1,36.394959166646,-80.2653537970036,517.99609375,,,,,,,,,,,,,,,,,,,,,
