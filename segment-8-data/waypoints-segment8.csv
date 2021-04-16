@@ -1,4 +1,4 @@
-id,lat,lon,ele,time,magvar,geoidheight,name,cmt,desc,src,sym,type,fix,sat,hdop,vdop,pdop,ageofdgpsdata,dgpsid,Proximity,Temperature,Depth,DisplayMode,Samples,Expiration,CreationTime
+ID,lat,lon,ele,time,magvar,geoidheight,name,cmt,desc,src,sym,type,fix,sat,hdop,vdop,pdop,ageofdgpsdata,dgpsid,Proximity,Temperature,Depth,DisplayMode,Samples,Expiration,CreationTime
 1,36.3945638760924,-80.2658248599619,0,2021-02-11T23:08:04Z,,,08-001,,,,"Flag, Blue",user,,,,,,,,,,,SymbolAndName,,,2021-02-11T23:08:04Z
 2,36.3947621081024,-80.2659634966403,0,2021-02-11T23:08:04Z,,,08-001T,,,,"Flag, Blue",user,,,,,,,,,,,SymbolAndName,,,2021-02-11T23:08:04Z
 3,36.3955148868263,-80.2648731786758,0,2021-02-11T23:08:04Z,,,08-002,,,,"Flag, Blue",user,,,,,,,,,,,SymbolAndName,,,2021-02-11T23:08:04Z

@@ -1,10 +1,51 @@
-import { calcDistance, Miles } from './distance'
-import { Point } from './import-data'
+import { calcDistance} from './distance'
+
+export type Miles = number
+
+export interface Coordinate {
+  latitude: number
+  longitude: number
+}
+export interface Point {
+  id: number
+  coordinate: Coordinate
+}
 
 interface Output {
   waypoint: Point
   trackpointDistance: Miles
   trackpoint: Point
+}
+
+export function cleanWaypointData(data: any) {
+  const waypoints = data.map((waypoint: any) => {
+    const point = {
+      id: Number(waypoint['ID']),
+      coordinate:
+      {
+        latitude: Number(waypoint['lat']),
+        longitude: Number(waypoint['lon'])
+      }
+    }
+    return point
+  })
+  return waypoints
+}
+
+
+export function cleanTrackpointData(data: any) {
+  const trackpoints = data.map((trackpoint: any) => {
+    const point = {
+      id: Number(trackpoint['ID']),
+      coordinate:
+      {
+        latitude: Number(trackpoint['lat']),
+        longitude: Number(trackpoint['lon'])
+      }
+    }
+    return point
+  })
+  return trackpoints
 }
 
 export function totalDistance(trackpoints: Point[]) {

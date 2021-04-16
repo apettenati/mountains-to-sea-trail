@@ -1,4 +1,10 @@
+export { getCsvDataFromBrowser, createNewWaypointFile } from './import-data-browser'
+export { calcDistance } from './distance'
+export {
+  Point, Coordinate, Miles, cleanTrackpointData, cleanWaypointData,
+  totalDistance, getClosestTrackpoint, associateWaypointsWithTrackpoints, checkOutliers
+} from './convert-waypoints'
 
-export { totalDistance, getClosestTrackpoint, associateWaypointsWithTrackpoints, checkOutliers } from './convert-waypoints'
-// export { Point, getTrackpointData, getWaypointData } from './import-data'
-export { calcDistance, Miles } from './distance'
+
+// for use with file system
+// export { getCsvDataFromFileSystem } from './import-data-fs'
