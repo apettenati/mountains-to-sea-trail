@@ -63,14 +63,12 @@ function convertListener() {
     const waypointData = (await getCsvDataFromBrowser(waypointFiles[0])).data
 
     const newWaypoints = convertWaypoints(waypointData, trackpointData)
-    console.log({newWaypoints})
-
+    // console.log({newWaypoints})
     downloadNewWaypointsJSON(newWaypoints)
 
     // const newCsv = createNewWaypointFile(newWaypoints)
     // console.log({newCsv})
     // downloadNewWaypointsCSV(newCsv)
-
   })
 }
 
