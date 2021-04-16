@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <header>
+    <h1> The Mountains-to-Sea Trail </h1>
+  </header>
+  <main>
+    <div class="waypoint-converter">
+      <h2> Waypoint to Trackpoint Converter </h2>
+      <div class="instructions">
+        <h3>Instructions</h3>
+        <p> Upload a file containing the trackpoint data and a file containing the waypoint data. </p>
+        <p> Files should contain columns named:
+          <li>id</li>
+          <li>lat</li>
+          <li>lon</li>
+        </p>
+        <p> File output will include the original waypoint data and associated trackpoint data. </p>
+      </div>
+      <div class="file-upload">
+        <label for="trackpoint-data">Trackpoint Data: </label>
+        <input type="file" class="trackpoint-data" name="trackpoint">
+        <label for="waypoint-data">Waypoint Data: </label>
+        <input type="file" class="waypoint-data" name="waypoint">
+        <input type="submit" value="Convert">
+      </div>
+    </div>
+  </main>
+  <script>
+    const trackpointFile = document.querySelector('.trackpoint-data')
+    const waypointFile = document.querySelector('.waypoint-data')
+    const convertSubmit = document.querySelector('[type="submit"]')
+    convertSubmit.addEventListener('click', (event) => {
+      console.log(event)
+      const trackpointData = trackpointFile.files[0]
+      const waypointData = waypointFile.files[0]
+      // console.log(trackpointFile.files[0])
+      const trackpointParser = Papa.parse(trackpointData, {
+        header: true,
+        complete: function(results, file) {
+          console.log("Parsing complete:", results, file);
+        },
+        })
+
+      const waypointParser = Papa.parse(waypointData, {
+        header: true,
+        complete: function(results, file) {
+          console.log("Parsing complete:", results, file);
+        }
+      })
+    })
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.2.0/papaparse.min.js"></script>
+  <!-- <script src="./index.js"></script> -->
+</body>
+
+</html>
