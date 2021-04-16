@@ -2,7 +2,6 @@ import {
   totalDistance, associateWaypointsWithTrackpoints, 
   checkOutliers, getTrackpointData, getWaypointData, calcDistance 
 } from './convert-waypoints'
-import { inspect } from 'util'
 
 async function main() {
   const trackpointFile = './segment-8-data/trackpoints-segment8.csv'
@@ -13,14 +12,9 @@ async function main() {
   const totalMiles = totalDistance(trackpoints)
   // console.log({ dist, totalMiles })
   const newWaypoints = associateWaypointsWithTrackpoints(waypoints, trackpoints)
-  // console.log(inspect({ newWaypoints }, { depth: 5, colors: true, maxArrayLength: 180 }))
+  // console.log({ newWaypoints })
   const outliers = checkOutliers(newWaypoints, 0.05)
-  // console.log(inspect({ outliers }, { depth: 5, colors: true }))
-
-  const hike = require('./mygeodata.json')
-  const features = hike.features
-  console.log(features[9])
-
+  // console.log({ outliers })
 }
 
 main()
