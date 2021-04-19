@@ -1,6 +1,6 @@
 # Mountains to Sea Trail
 
-## Waypoont to Trackpoint Converter
+## Waypoint to Trackpoint Converter
 
 [Live Link](https://apettenati.github.io/mountains-to-sea-trail/)
 
