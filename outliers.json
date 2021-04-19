@@ -1,0 +1,157 @@
+{
+  "outliers": [
+    {
+      "waypoint": {
+        "id": 53,
+        "coordinate": {
+          "latitude": 36.2413000222296,
+          "longitude": -80.0634293071926
+        }
+      },
+      "trackpointDistance": 0.0658653463771574,
+      "trackpoint": {
+        "id": 2208,
+        "coordinate": {
+          "latitude": 36.2422200199217,
+          "longitude": -80.0631299894303
+        }
+      }
+    },
+    {
+      "waypoint": {
+        "id": 55,
+        "coordinate": {
+          "latitude": 36.2277251947671,
+          "longitude": -80.0540497899056
+        }
+      },
+      "trackpointDistance": 0.05095243776346138,
+      "trackpoint": {
+        "id": 2248,
+        "coordinate": {
+          "latitude": 36.2269900180399,
+          "longitude": -80.0540099758655
+        }
+      }
+    },
+    {
+      "waypoint": {
+        "id": 70,
+        "coordinate": {
+          "latitude": 36.1888999678195,
+          "longitude": -80.0312619935721
+        }
+      },
+      "trackpointDistance": 0.05716614968583472,
+      "trackpoint": {
+        "id": 2578,
+        "coordinate": {
+          "latitude": 36.1880971491337,
+          "longitude": -80.0315197370946
+        }
+      }
+    },
+    {
+      "waypoint": {
+        "id": 89,
+        "coordinate": {
+          "latitude": 36.173356063664,
+          "longitude": -79.999687448144
+        }
+      },
+      "trackpointDistance": 0.05343792253241072,
+      "trackpoint": {
+        "id": 3127,
+        "coordinate": {
+          "latitude": 36.1727450229228,
+          "longitude": -80.0002650450915
+        }
+      }
+    },
+    {
+      "waypoint": {
+        "id": 112,
+        "coordinate": {
+          "latitude": 36.1776320077479,
+          "longitude": -79.8822619300336
+        }
+      },
+      "trackpointDistance": 0.052816551340173386,
+      "trackpoint": {
+        "id": 3587,
+        "coordinate": {
+          "latitude": 36.1780889052898,
+          "longitude": -79.8814982548356
+        }
+      }
+    },
+    {
+      "waypoint": {
+        "id": 117,
+        "coordinate": {
+          "latitude": 36.1696591414511,
+          "longitude": -79.8673885781318
+        }
+      },
+      "trackpointDistance": 0.05033106657122405,
+      "trackpoint": {
+        "id": 3619,
+        "coordinate": {
+          "latitude": 36.170261381194,
+          "longitude": -79.8668792936951
+        }
+      }
+    },
+    {
+      "waypoint": {
+        "id": 153,
+        "coordinate": {
+          "latitude": 36.1738940142095,
+          "longitude": -79.7920749988407
+        }
+      },
+      "trackpointDistance": 0.08450648214427742,
+      "trackpoint": {
+        "id": 5541,
+        "coordinate": {
+          "latitude": 36.1745472997427,
+          "longitude": -79.7907924000174
+        }
+      }
+    },
+    {
+      "waypoint": {
+        "id": 154,
+        "coordinate": {
+          "latitude": 36.1739599797875,
+          "longitude": -79.7920699696988
+        }
+      },
+      "trackpointDistance": 0.08202099737532807,
+      "trackpoint": {
+        "id": 5539,
+        "coordinate": {
+          "latitude": 36.1747591104358,
+          "longitude": -79.7909834235907
+        }
+      }
+    },
+    {
+      "waypoint": {
+        "id": 167,
+        "coordinate": {
+          "latitude": 36.1656619794667,
+          "longitude": -79.7684309910983
+        }
+      },
+      "trackpointDistance": 0.16342062355841883,
+      "trackpoint": {
+        "id": 6052,
+        "coordinate": {
+          "latitude": 36.1669510323554,
+          "longitude": -79.7708878945559
+        }
+      }
+    }
+  ]
+}
