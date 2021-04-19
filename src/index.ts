@@ -28,22 +28,11 @@ function convertWaypoints(rawWaypoints: any, rawTrackpoints: any) {
   return newWaypoints
 }
 
-function downloadNewWaypointsJSON(data: any) {
+function downloadNewWaypointsJSON(data: any, filename: string) {
   const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data))
   const anchorElement = document.createElement('a')
   anchorElement.setAttribute('href', dataStr)
-  anchorElement.setAttribute('download', 'newWaypoints.json')
-  const textNode = document.createTextNode('Download New Waypoints')
-  anchorElement.appendChild(textNode)
-  anchorElement.click()
-  document.querySelector('.file-upload')?.appendChild(anchorElement)
-}
-
-function downloadNewWaypointsCSV(data: any) {
-  const dataStr = 'data:text/csv;charset=utf-8,' + encodeURIComponent(JSON.stringify(data))
-  const anchorElement = document.createElement('a')
-  anchorElement.setAttribute('href', dataStr)
-  anchorElement.setAttribute('download', 'newWaypoints.json')
+  anchorElement.setAttribute('download', `${filename}.json`)
   const textNode = document.createTextNode('Download New Waypoints')
   anchorElement.appendChild(textNode)
   anchorElement.click()
@@ -58,17 +47,15 @@ function convertListener() {
   convertSubmit?.addEventListener('click', async (event) => {
     if (!trackpointFiles) throw new Error('Trackpoint file not uploaded!')
     const trackpointData = (await getCsvDataFromBrowser(trackpointFiles[0])).data
-    console.log({trackpointData})
     if (!waypointFiles) throw new Error('Waypoint file not uploaded!')
     const waypointData = (await getCsvDataFromBrowser(waypointFiles[0])).data
 
     const newWaypoints = convertWaypoints(waypointData, trackpointData)
-    // console.log({newWaypoints})
-    downloadNewWaypointsJSON(newWaypoints)
+    const filename = document.querySelector('input.file-name') as HTMLInputElement
+    downloadNewWaypointsJSON(newWaypoints, filename?.value)
 
-    // const newCsv = createNewWaypointFile(newWaypoints)
-    // console.log({newCsv})
-    // downloadNewWaypointsCSV(newCsv)
+    const outliers = checkOutliers(newWaypoints, 0.05)
+    console.log({ outliers })
   })
 }
 
